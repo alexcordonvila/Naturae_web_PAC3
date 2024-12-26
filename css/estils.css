@@ -77,12 +77,11 @@ header {
     color: var(--color-negre);
     background-color: var(--color-blanc);
 }
-
-header h1::before {
+.logo-container{
     content: url("../img/logotip.svg");
     display: inline-block;
-
 }
+
 
 nav {
     display: flex;
