@@ -1,0 +1,189 @@
+/*=======
+Font: La família de font per a tot el lloc web serà la Alegreya Sans
+=========*/
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*===========================================================
+  VARIABLES
+  Descripció: Definició de les variables de colors, tipografies i mides
+  de font que s'utilitzaran a tot el lloc web per facilitar la personalització.
+===========================================================*/
+
+:root {
+    --main-font: "Alegreya Sans", serif;
+    
+    --color-negre: rgb(0, 0, 0);
+    --color-blanc: rgb(255, 255, 255);
+    --color-verd: rgb(64, 195, 130);
+    --color-beix: rgb(242, 242, 230);
+    --color-beix-modificat: rgba(242, 242, 230, 0.7);
+
+  
+    --font-size-base: 1.1em;
+    --font-size-xnano: 0.45em;
+    --font-size-nano: 0.55em;
+    --font-size-micro: 0.625em;
+    --font-size-xsmall: 0.75em;
+    --font-size-small: 0.875em;
+    --font-size-large: 1.125em;
+    --font-size-xlarge: 1.5em;
+    --font-size-xxlarge: 2em;
+    --font-size-h1: 4.1em;
+    --font-size-h2: 2.25em;
+    --font-size-h2-plus: 3em;
+    --font-size-h3: 1.75em;
+  
+    --padding-right: 14vw;
+  }
+/*===========================================================
+  VARIABLES
+  Format recomanat per l'exercici.
+  Modificar el mínim possible
+  En aquest css usarem l'estil de caixa alternatiu amb box-sizing: border-box
+===========================================================*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; 
+  }
+  
+/*===========================================================
+  ELEMENTS COMÚNS
+===========================================================*/
+html,
+body {
+  width: 100%;
+  /*Recomanat*/
+  height: 100%;
+  /*Recomanat*/
+  font-family: var(--main-font);
+}
+footer {
+    background-color: var(--color-negre);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header{
+    display: flex;
+    color: var(--color-negre);
+    background-color: var(--color-blanc);
+}
+header h1::before {
+    content: url("../img/logotip.svg");
+    display: inline-block;
+
+  }
+nav{
+    display: flex;
+
+  }
+  nav a{
+    text-decoration: none; 
+    color: var(--color-negre);
+    font-weight: 700;
+   
+  }
+/* Contenidor principal adaptable */
+.container {
+    padding: 20px; /* Padding general */
+}
+.container-max {
+    max-width: 1140px;
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+
+
+
+
+
+/* Media Queries per ser responsive */
+
+/* Mobils (fins a 767px) */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px; /* Padding más pequeño en móviles */
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px ;
+
+
+    }
+    nav{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: larger;
+      }
+      nav a{
+        padding: 5px;
+      }
+}
+
+/* Tablets (entre 768px i 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        padding: 15px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px ;
+
+
+    }
+    nav{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: larger;
+      }
+      nav a{
+        padding: 5px;
+      }
+}
+
+/* Escriptori (a partir de 992px) */
+@media (min-width: 992px) {
+    .container {
+        padding: 20px;
+    }
+    header{
+        width: 100%;
+        padding: 30px 50px 10px 50px;
+    }
+    header h1::before {
+        display: inline-block;
+        padding-right: 1px;
+        padding-bottom: 10px;
+      }
+      nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+      }
+      nav a{
+        padding: 10px;
+      }
+      
+      nav a:nth-child(1)::after{ /* Selecciona todos los <a> excepto el último */
+        content: "|";
+        border-right: 1px;
+        transform: translateY(-50%);
+        margin-left: 20px;
+    
+    }
+}
