@@ -81,7 +81,15 @@ header {
     content: url("../img/logotip.svg");
     display: inline-block;
 }
-
+article {
+    margin-left: auto;
+    /*Recomanat*/
+    margin-right: auto;
+    /*Recomanat*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
 nav {
     display: flex;
@@ -110,7 +118,35 @@ nav a:hover{
 }
 
 
+/*===========================================================
+  SELECTORS PER INDEX.HTML
+===========================================================*/
+.index_content {
+    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
 
+  }
+
+/*===========================================================
+  SELECTORS PER post.HTML
+===========================================================*/
+.post_content {
+    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+
+  }
+/*===========================================================
+  SELECTORS PER tema-del-mes.HTML
+===========================================================*/
+.tema_del_mes_content {
+    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+
+  }
+/*===========================================================
+  SELECTORS PER blog.HTML
+===========================================================*/
+.blog_content {
+    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+
+  }
 
 
 
