@@ -63,6 +63,7 @@ body {
     height: 100%;
     /*Recomanat*/
     font-family: var(--main-font);
+    background-color: var(--color-beix);
 }
 
 footer {
@@ -144,16 +145,41 @@ nav a:hover {
     color: var(--color-verd);
 }
 
+/*Contingut del contenidor per sota de la imatge*/
+.index_content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.index_content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.index_content .contenido-naturae-hub {
+    display: flex;
+    flex-wrap: wrap; /* Para que se adapte a pantallas más pequeñas */
+    justify-content: space-between; /* Espacio entre el texto y el formulario */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+}
+.index_content .texto-naturae-hub {
+    flex: 1 1 50%; /* Ocupa la mitad del espacio disponible */
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.index_content .formulario-newsletter {
+    flex: 1 1 30%; /* Ocupa un tercio del espacio disponible */
+    padding: 20px;
+    
+  
+}
+/**/
 /* Contenidor principal adaptable */
 .container {
     padding: 20px;
-    /* Padding general */
 }
 
 .container-max {
     max-width: 1140px;
     margin: 0 auto;
-    /* Centrar el contenedor */
 }
 
 
@@ -166,6 +192,56 @@ nav a:hover {
 
 }
 
+
+/*HERO IMAGE de index:*/
+.hero {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-image: url(../img/hero-image-home.jpg);
+    background-position: center 50%;
+    padding-top: 45vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%; 
+    text-align: center;
+ 
+  }
+  
+  .hero-title {
+    font-size: 3rem; 
+    margin: 0 0 1rem; 
+    color: var(--color-blanc);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem; 
+    color: var(--color-blanc); 
+ }
+  .hero-credits{
+    font-size: var(--font-size-xsmall);
+    padding: 7px 11px 11px 6px;
+    margin: 10px;
+    background-color: var(--color-beix-modificat);
+  }
+  .hero-credits a{
+    
+    text-decoration: underline dotted;
+    color: var(--color-negre);
+  }
+
+/*--------------------*/
 /*===========================================================
   SELECTORS PER post.HTML
 ===========================================================*/
