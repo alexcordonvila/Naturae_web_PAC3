@@ -67,9 +67,40 @@ body {
 
 footer {
     background-color: var(--color-negre);
-    color: white;
-    padding: 20px;
-    text-align: center;
+    color: var(--color-blanc);
+    display: flex;
+
+}
+
+footer .instagram-container {
+    content: url("../img/instagram.svg");
+    display: inline-block;
+}
+
+footer .youtube-container {
+    content: url("../img/youtube.svg");
+    display: inline-block;
+}
+
+footer .legal-links a {
+    text-decoration: none;
+    color: var(--color-blanc);
+}
+
+footer .footer-social {
+    display: flex;
+}
+
+footer .footer-logo {
+    display: flex;
+}
+
+footer li a:hover {
+    color: var(--color-verd);
+}
+
+footer .social-links a:hover {
+    opacity: 0.7;
 }
 
 header {
@@ -77,10 +108,17 @@ header {
     color: var(--color-negre);
     background-color: var(--color-blanc);
 }
-.logo-container{
+
+header .logo-container {
     content: url("../img/logotip.svg");
     display: inline-block;
 }
+
+footer .logo-container-footer {
+    content: url("../img/logotip-n.svg");
+    display: inline-block;
+}
+
 article {
     margin-left: auto;
     /*Recomanat*/
@@ -89,7 +127,7 @@ article {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+}
 
 nav {
     display: flex;
@@ -101,7 +139,8 @@ nav a {
     color: var(--color-negre);
     font-weight: 700;
 }
-nav a:hover{
+
+nav a:hover {
     color: var(--color-verd);
 }
 
@@ -122,31 +161,37 @@ nav a:hover{
   SELECTORS PER INDEX.HTML
 ===========================================================*/
 .index_content {
-    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+    flex-grow: 1;
+    /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
 
-  }
+}
 
 /*===========================================================
   SELECTORS PER post.HTML
 ===========================================================*/
 .post_content {
-    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+    flex-grow: 1;
+    /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
 
-  }
+}
+
 /*===========================================================
   SELECTORS PER tema-del-mes.HTML
 ===========================================================*/
 .tema_del_mes_content {
-    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+    flex-grow: 1;
+    /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
 
-  }
+}
+
 /*===========================================================
   SELECTORS PER blog.HTML
 ===========================================================*/
 .blog_content {
-    flex-grow: 1; /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+    flex-grow: 1;
+    /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
 
-  }
+}
 
 
 
@@ -177,6 +222,32 @@ nav a:hover{
     nav a {
         padding: 5px;
     }
+    footer {
+        flex-direction: column;
+        padding: 30px 50px 50px 50px;
+    }
+
+    footer .footer-social {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer .footer-logo {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .legal-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 /* Tablets (entre 768px i 991px) */
@@ -202,6 +273,33 @@ nav a:hover{
     nav a {
         padding: 5px;
     }
+
+    footer {
+        flex-direction: column;
+        padding: 30px 50px 50px 50px;
+    }
+
+    footer .footer-social {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer .footer-logo {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .legal-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 /* Escriptori (a partir de 992px) */
@@ -216,6 +314,24 @@ nav a:hover{
         align-items: center;
     }
 
+    footer {
+        padding: 30px 50px 50px 50px;
+        justify-content: space-between;
+        font-size: var(--font-size-small);
+    }
+
+    footer .footer-social {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+    footer .footer-logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
     nav a {
         padding: 10px;
     }
@@ -224,5 +340,32 @@ nav a:hover{
         content: "|";
         margin-left: 20px;
         color: var(--color-negre);
+    }
+
+    .legal-links {
+        list-style: none;
+        /* Elimina els punts de la llista */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        /* Mostra els elements en línia */
+        gap: 0.5rem;
+        /* Espai entre els elements */
+    }
+
+    .legal-links li {
+        display: inline;
+        /* Assegura que els elements siguin en línia */
+    }
+
+    .legal-links li:not(:last-child)::after {
+        content: "|";
+        /* Afegeix el separador */
+        margin-left: 0.5rem;
+        /* Espai abans del separador */
+        margin-right: 0.5rem;
+        /* Espai després del separador */
+        color: #666;
+        /* Color del separador (opcional) */
     }
 }
