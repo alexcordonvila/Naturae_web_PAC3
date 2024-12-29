@@ -18,20 +18,20 @@ Font: La família de font per a tot el lloc web serà la Alegreya Sans
     --color-beix: rgb(242, 242, 230);
     --color-beix-modificat: rgba(242, 242, 230, 0.7);
 
-
-    --font-size-base: 1.1em;
     --font-size-xnano: 0.45em;
     --font-size-nano: 0.55em;
     --font-size-micro: 0.625em;
     --font-size-xsmall: 0.75em;
     --font-size-small: 0.875em;
+    --font-size-base: 1.1em;
     --font-size-large: 1.125em;
-    --font-size-xlarge: 1.5em;
-    --font-size-xxlarge: 2em;
-    --font-size-h1: 4.1em;
-    --font-size-h2: 2.25em;
-    --font-size-h2-plus: 3em;
     --font-size-h3: 1.75em;
+    --font-size-xlarge: 1.5em;
+    --font-size-h2: 2.25em;
+    --font-size-xxlarge: 2em;
+    --font-size-h2-plus: 3em;
+    --font-size-h1: 4.1em;
+    
 
     --padding-right: 14vw;
 }
@@ -155,7 +155,10 @@ nav a:hover {
     max-width: 1140px;
     margin: 0 auto;
 }
-
+.container-max-2 {
+    max-width: 1140px;
+    margin: 0 auto;
+}
 
 /*===========================================================
   SELECTORS PER INDEX.HTML
@@ -211,9 +214,17 @@ nav a:hover {
     background-color: var(--color-beix-modificat);
 }
 
+.animal a,
 .index_content a {
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-negre);
+    color: var(--color-negre);
+}
 
-    text-decoration: underline dotted;
+.animal a:hover,
+.index_content a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-negre);
     color: var(--color-negre);
 }
 
@@ -238,7 +249,7 @@ nav a:hover {
     border-radius: 5px;
     box-sizing: border-box;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: var(--color-blanc);
     row-gap: 20px;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -254,7 +265,7 @@ nav a:hover {
     color: var(--color-negre);
     padding: 8px 0px;
     margin: 45px 30px 0 0;
-    border: 1px solid black;
+    border: 1px solid var(--color-negre);
     background-color: transparent;
     cursor: pointer;
     width: 41%;
@@ -280,13 +291,13 @@ nav a:hover {
 
 .contenidor-tema-mes {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 10px;
     flex-direction: column;
 }
 
 .tema {
-    font-size: var(--font-size-xxlarge);
+    font-size: var(--font-size-h1);
     font-weight: 700;
     margin-right: 10px;
 }
@@ -294,13 +305,14 @@ nav a:hover {
 .mes-any {
     background-color: var(--color-verd);
     color: var(--color-blanc);
-    padding: 5px 10px;
-    font-size: var(--font-size-xxlarge);
+    padding: 5px 15px 0px 15px;
+    font-size: var(--font-size-h1);
     font-weight: 700;
 }
 
 .subtitol {
-    font-size: 1.5em;
+    margin-top: 40px;
+    font-size: var(--font-size-h2);
 }
 
 /*Barra de navegació + llista d'animals*/
@@ -309,7 +321,6 @@ nav a:hover {
 
 .tema_del_mes_content nav {
     justify-content: space-evenly;
-
 }
 
 .tema_del_mes_content .navegacio ul {
@@ -328,6 +339,58 @@ nav a:hover {
     vertical-align: inherit;
 }
 
+/*Estil per al bloc d'animal: Nom, foto, descripció...*/
+
+.animal {
+    box-sizing: border-box;
+    text-align: justify;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.animal h1 {
+    font-size: var(--font-size-h1);
+}
+
+.animal h2 {
+    font-size: var(--font-size-h2);
+}
+
+.nom_estat_animal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.descripcio_animal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.animal img {
+    border: 15px solid var(--color-blanc);
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.mes-info {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.animal figcaption {
+    margin-top: 10px;
+    font-size: var(--font-size-small);
+}
+.nom_estat_animal p {
+    font-size: var(--font-size-large);
+    font-weight: 400;
+}
 /*----------------------------------*/
 
 
@@ -465,7 +528,7 @@ nav a:hover {
     .formulario-newsletter button[type="submit"] {
         color: var(--color-negre);
         padding: 8px 0px;
-        border: 1px solid black;
+        border: 1px solid var(--color-negre);
         background-color: transparent;
         cursor: pointer;
         width: 31%;
@@ -474,6 +537,13 @@ nav a:hover {
     /*===========================================================
   SELECTORS PER tema-del-mes.HTML
 ===========================================================*/
+.tema_del_mes_content nav {
+    justify-content: space-evenly;
+    font-size: var(--font-size-small);
+}
+.subtitol {
+    font-size: var(--font-size-h2-plus);
+}
 
 }
 
@@ -587,7 +657,7 @@ nav a:hover {
     .formulario-newsletter button[type="submit"] {
         color: var(--color-negre);
         padding: 8px 0px;
-        border: 1px solid black;
+        border: 1px solid var(--color-negre);
         background-color: transparent;
         cursor: pointer;
         width: 31%;
@@ -610,6 +680,7 @@ nav a:hover {
     .contenidor-tema-mes {
         flex-direction: row;
     }
+    
 }
 
 /* Escriptori (a partir de 992px) */
@@ -754,12 +825,17 @@ nav a:hover {
     }
 
     .animals {
+        width: 90%;
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        column-gap: 220px;
+        column-gap: 135px;
     }
-
+    .animals > ul li{
+        margin-bottom: 50px;
+    }
+    
     .tema_del_mes_content .navegacio ul {
         list-style: none;
         padding: 0;
@@ -769,7 +845,7 @@ nav a:hover {
         flex-direction: column;
     }
 
-    .tema_del_mes_content li {
+    .tema_del_mes_content .navegacio li {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -777,5 +853,71 @@ nav a:hover {
 
     .tema_del_mes_content ul li:not(:last-child)::after {
         content: "";
+    }
+
+    .animal {
+        box-sizing: border-box;
+        text-align: justify;
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    
+    .animal h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .animal h2 {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .nom_estat_animal p {
+        font-size: var(--font-size-small);
+        font-weight: 400;
+    }
+
+    .nom_estat_animal {
+        flex: 1 1 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .animal figure {
+        flex-wrap: wrap;
+        align-content: space-between;
+        flex: 1 1 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .descripcio_animal {
+        /* border: 1px solid rgba(0, 0, 0, 0); */
+        flex: 1 1 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: var(--font-size-xlarge);
+    }
+
+    .animal img {
+        border: 15px solid white;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .animal figcaption {
+        margin-top: 5px;
+        text-align: left;
+        font-size: var(--font-size-micro);
+    }
+
+    .mes-info {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
     }
 }
