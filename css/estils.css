@@ -70,7 +70,6 @@ footer {
     background-color: var(--color-negre);
     color: var(--color-blanc);
     display: flex;
-
 }
 
 footer .instagram-container {
@@ -273,7 +272,7 @@ nav a:hover {
 
 .contenidor-titol {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     padding: 20px;
     text-align: center;
@@ -282,27 +281,55 @@ nav a:hover {
 .contenidor-tema-mes {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     flex-direction: column;
 }
 
 .tema {
-    font-size: var(--font-size-xxlarge); 
+    font-size: var(--font-size-xxlarge);
     font-weight: 700;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .mes-any {
     background-color: var(--color-verd);
-    color: white;
-    padding: 5px 10px; 
+    color: var(--color-blanc);
+    padding: 5px 10px;
     font-size: var(--font-size-xxlarge);
     font-weight: 700;
 }
 
 .subtitol {
-    font-size: 1.5em; 
+    font-size: 1.5em;
 }
+
+/*Barra de navegació + llista d'animals*/
+
+/*Barra de navegació d'animals*/
+
+.tema_del_mes_content nav {
+    justify-content: space-evenly;
+
+}
+
+.tema_del_mes_content .navegacio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+.tema_del_mes_content ul li:not(:last-child)::after {
+    content: "\00B7";
+    font-size: 1.5em;
+    color: var(--color-verd);
+    vertical-align: inherit;
+}
+
+/*----------------------------------*/
+
 
 
 /*===========================================================
@@ -378,7 +405,7 @@ nav a:hover {
         gap: 0.5rem;
     }
 
-/*===========================================================
+    /*===========================================================
   SELECTORS PER index.HTML
 ===========================================================*/
     /*Contingut del contenidor per sota de la imatge*/
@@ -444,7 +471,7 @@ nav a:hover {
         width: 31%;
     }
 
-/*===========================================================
+    /*===========================================================
   SELECTORS PER tema-del-mes.HTML
 ===========================================================*/
 
@@ -502,14 +529,15 @@ nav a:hover {
         gap: 0.5rem;
     }
 
-/*===========================================================
+    /*===========================================================
   SELECTORS PER index.HTML Tablets
-===========================================================*/    
-/*Contingut del contenidor per sota de la imatge*/
+===========================================================*/
+    /*Contingut del contenidor per sota de la imatge*/
     .index_content h2 {
         font-size: 2rem;
         margin: 40px 0 40px 0;
     }
+
     .contenido-naturae-hub {
         display: flex;
         flex-direction: column;
@@ -576,12 +604,12 @@ nav a:hover {
         column-gap: 40px;
     }
 
-/*===========================================================
+    /*===========================================================
   SELECTORS PER tema-del-mes.HTML Tablets
 ===========================================================*/
-.contenidor-tema-mes {
-    flex-direction: row;
-}
+    .contenidor-tema-mes {
+        flex-direction: row;
+    }
 }
 
 /* Escriptori (a partir de 992px) */
@@ -616,12 +644,15 @@ nav a:hover {
         gap: 1rem;
     }
 
-    nav a {
+    header nav a,
+    footer nav a {
         padding: 10px;
     }
 
-    nav a:nth-child(1)::after {
-        content: "|";
+    header nav a:nth-child(1)::after,
+    footer nav a:nth-child(1)::after {
+        content: "\007C";
+        /* Barra vertical | (codi Unicode) */
         margin-left: 20px;
         color: var(--color-negre);
     }
@@ -639,13 +670,14 @@ nav a:hover {
     }
 
     .legal-links li:not(:last-child)::after {
-        content: "|";
+        content: "\007C";
+        /* Barra vertical | (codi Unicode) */
         margin-left: 0.5rem;
         margin-right: 0.5rem;
         color: #666;
     }
 
-/*===========================================================
+    /*===========================================================
   SELECTORS PER index.HTML Desktop
 ===========================================================*/
     /*Contingut del contenidor per sota de la imatge*/
@@ -702,6 +734,7 @@ nav a:hover {
         cursor: pointer;
         width: 31%;
     }
+
     .histories-canvi {
         padding: 40px 0;
     }
@@ -712,10 +745,37 @@ nav a:hover {
         margin-top: 20px;
         column-gap: 40px;
     }
-/*===========================================================
+
+    /*===========================================================
   SELECTORS PER tema-del-mes.HTML Desktop
 ===========================================================*/
-.contenidor-tema-mes {
-    flex-direction: row;
-}
+    .contenidor-tema-mes {
+        flex-direction: row;
+    }
+
+    .animals {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        column-gap: 220px;
+    }
+
+    .tema_del_mes_content .navegacio ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+    }
+
+    .tema_del_mes_content li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tema_del_mes_content ul li:not(:last-child)::after {
+        content: "";
+    }
 }
