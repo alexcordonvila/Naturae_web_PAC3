@@ -212,13 +212,13 @@ nav a:hover {
     background-color: var(--color-beix-modificat);
 }
 
-.hero-credits a {
+.index_content a {
 
     text-decoration: underline dotted;
     color: var(--color-negre);
 }
 
-/*--------------------*/
+
 /*Contingut del contenidor per sota de la imatge*/
 .index_content h2 {
     font-size: 2rem;
@@ -230,7 +230,36 @@ nav a:hover {
     margin-bottom: 10px;
     font-weight: 400;
 }
+.formulario-newsletter button[type="submit"] {
+    color: var(--color-negre);
+    padding: 8px 0px;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    width: 31%;
+}
+.formulario-newsletter input[type="checkbox"] {
+    margin-right: 5px;
+}
 
+.histories-canvi {
+    padding: 20px 0;
+}
+.index_content.formulario-newsletter label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.formulario-newsletter input[type="text"],
+    .formulario-newsletter input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid var(--color-beix);
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
 .tarjeta {
     display: flex;
     flex-direction: column;
@@ -263,7 +292,7 @@ nav a:hover {
     text-decoration: none;
 }
 
-
+/*--------------------*/
 
 /*===========================================================
   SELECTORS PER post.HTML
@@ -349,6 +378,56 @@ nav a:hover {
         align-items: center;
         gap: 0.5rem;
     }
+
+    /*Estil propi de index.html*/
+    /*Contingut del contenidor per sota de la imatge*/
+    
+    .index_content h2 {
+        font-size: 2rem;
+        margin: 40px 0 40px 0;
+    }
+
+
+
+    .contenido-naturae-hub {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .texto-naturae-hub {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .formulario-newsletter {
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario-newsletter form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+    }
+   
+    .formulario-newsletter input[type="text"],
+    .formulario-newsletter input[type="email"] {
+        width: 65%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid var(--color-beix);
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    
+   
 }
 
 /* Tablets (entre 768px i 991px) */
@@ -442,77 +521,15 @@ nav a:hover {
     .formulario-newsletter input[type="text"],
     .formulario-newsletter input[type="email"] {
         width: 65%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid var(--color-beix);
-        border-radius: 5px;
-        box-sizing: border-box;
     }
-
-    .index_content.formulario-newsletter label {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .formulario-newsletter input[type="checkbox"] {
-        margin-right: 5px;
-    }
-
-    .formulario-newsletter button[type="submit"] {
-        color: var(--color-negre);
-        padding: 8px 0px;
-        border: 1px solid black;
-        background-color: transparent;
-        cursor: pointer;
-        width: 31%;
-    }
-
-    .formulario-newsletter a {
-        text-decoration: underline dotted;
-        color: var(--color-negre);
-    }
-
-    .histories-canvi {
-        padding: 40px 0;
-    }
-
+  
     .tarjetas-histories {
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
         column-gap: 40px;
     }
-
-    .tarjeta {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid var(--color-beix);
-        padding: 20px;
-        border-radius: 5px;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-        background-color: white;
-
-    }
-
-    .tarjeta h3 {
-        font-weight: 700;
-        font-size: var(--font-size-xlarge);
-    }
-
-    .tarjeta a {
-        color: var(--color-negre);
-        padding: 8px 0px;
-        margin-top: 40px;
-        border: 1px solid black;
-        background-color: transparent;
-        cursor: pointer;
-        width: 41%;
-        text-align: center;
-        text-decoration: none;
-    }
-
+ 
 }
 
 /* Escriptori (a partir de 992px) */
@@ -587,29 +604,21 @@ nav a:hover {
     /*Estil propi a index.html*/
 
     /*Contingut del contenidor per sota de la imatge*/
-
-
     .contenido-naturae-hub {
         display: flex;
         flex-wrap: wrap;
-        /* Para que se adapte a pantallas más pequeñas */
         justify-content: space-between;
-        /* Espacio entre el texto y el formulario */
         align-items: flex-start;
-        /* Alinea los elementos al inicio */
     }
 
     .texto-naturae-hub {
         flex: 1 1 50%;
-        /* Ocupa la mitad del espacio disponible */
         padding-right: 20px;
         box-sizing: border-box;
     }
 
     .formulario-newsletter {
-        flex: 1 1 30%;
-        /* Ocupa un tercio del espacio disponible */
-        padding: 20px;
+        flex: 1 1 20%;
         display: flex;
         flex-direction: column;
     }
@@ -618,45 +627,6 @@ nav a:hover {
         display: flex;
         flex-direction: column;
         row-gap: 10px;
-
-    }
-
-    .formulario-newsletter input[type="text"],
-    .formulario-newsletter input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid var(--color-beix);
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-
-    .index_content.formulario-newsletter label {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .formulario-newsletter input[type="checkbox"] {
-        margin-right: 5px;
-    }
-
-    .formulario-newsletter button[type="submit"] {
-        color: var(--color-negre);
-        padding: 8px 0px;
-        border: 1px solid black;
-        background-color: transparent;
-        cursor: pointer;
-        width: 31%;
-    }
-
-    .formulario-newsletter a {
-        text-decoration: underline dotted;
-        color: var(--color-negre);
-    }
-
-    .histories-canvi {
-        padding: 40px 0;
     }
 
     .tarjetas-histories {
@@ -665,6 +635,4 @@ nav a:hover {
         margin-top: 20px;
         column-gap: 40px;
     }
-
-
 }
