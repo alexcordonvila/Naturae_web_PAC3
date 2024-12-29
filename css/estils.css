@@ -213,11 +213,15 @@ nav a:hover {
 }
 
 .index_content a {
-
-    text-decoration: underline dotted;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-negre);
     color: var(--color-negre);
 }
-
+.index_content a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid  var(--color-negre);
+    color: var(--color-negre);
+}
 
 /*Contingut del contenidor per sota de la imatge*/
 .index_content h2 {
@@ -233,10 +237,13 @@ nav a:hover {
 .formulario-newsletter button[type="submit"] {
     color: var(--color-negre);
     padding: 8px 0px;
-    border: 1px solid black;
+    border: 1px solid var(--color-negre);
     background-color: transparent;
     cursor: pointer;
     width: 31%;
+}
+.formulario-newsletter button[type="submit"]:hover {
+    border: 1px solid var(--color-verd);
 }
 .formulario-newsletter input[type="checkbox"] {
     margin-right: 5px;
@@ -284,14 +291,16 @@ nav a:hover {
     color: var(--color-negre);
     padding: 8px 0px;
     margin: 45px 30px 0 0;
-    border: 1px solid black;
+    border: 1px solid var(--color-negre);
     background-color: transparent;
     cursor: pointer;
     width: 41%;
     text-align: center;
     text-decoration: none;
 }
-
+.tarjeta a:hover {
+    border: 1px solid var(--color-verd);
+}
 /*--------------------*/
 
 /*===========================================================
