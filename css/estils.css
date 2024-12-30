@@ -215,14 +215,14 @@ nav a:hover {
     margin: 10px;
     background-color: var(--color-beix-modificat);
 }
-
+.watermark a,
 .animal a,
 .index_content a {
     text-decoration: none;
     border-bottom: 1px dotted var(--color-negre);
     color: var(--color-negre);
 }
-
+.watermark a:hover,
 .animal a:hover,
 .index_content a:hover {
     text-decoration: none;
@@ -437,10 +437,7 @@ nav a:hover {
     height: auto;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-}
+
 
 .card-content {
     padding: 15px;
@@ -470,42 +467,55 @@ nav a:hover {
     font-size: var(--font-size-small);
     margin: 15px 0 0 0;
 }
+.image-container {
+    position: relative; 
+    display: inline-block; 
+}
+
+.image-container img {
+    display: block; 
+    max-width: 100%;
+    height: auto;
+}
+.watermark {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px; 
+    background-color: var(--color-beix-modificat);
+    color: var(--color-negre);
+    padding: 5px; 
+    font-size: 12px; 
+    font-family: sans-serif;
+}
+
 /*--------PAGINACIÓ GENERAL-------------*/
 .pagination {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 60px 0 70px;
 }
 
 .pagination li {
-    margin: 0 3px; /* Espaciado más pequeño entre elementos */
+    margin: 0 6px;
 }
-.pagination li a { /* O .pagination li */
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1; 
-    width: fit-content; /* Ancho pequeño */
-    background-color: var(--color-blanc);
-    min-width: 25px; /* Ancho mínimo */
 
-
-}
 .pagination a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
-    width: fit-content; 
+    width: fit-content;
+    min-width: 25px;
     border: 1px solid var(--color-negre);
     text-decoration: none;
     color: var(--color-negre);
     cursor: pointer;
     font-size: var(--font-size-small);
-    padding: 2px; 
+    padding: 2px;
     font-weight: 700;
+    background-color: var(--color-blanc);
 }
 
 .pagination a:hover {
@@ -634,7 +644,6 @@ nav a:hover {
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid var(--color-beix);
-        border-radius: 5px;
         box-sizing: border-box;
     }
 
@@ -772,7 +781,6 @@ nav a:hover {
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid var(--color-beix);
-        border-radius: 5px;
         box-sizing: border-box;
     }
 
@@ -884,10 +892,9 @@ nav a:hover {
 
     .legal-links li:not(:last-child)::after {
         content: "\007C";
-        /* Barra vertical | (codi Unicode) */
         margin-left: 0.5rem;
         margin-right: 0.5rem;
-        color: #666;
+        color: var(--color-blanc);
     }
 
     /*===========================================================
@@ -925,7 +932,6 @@ nav a:hover {
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid var(--color-beix);
-        border-radius: 5px;
         box-sizing: border-box;
     }
 
