@@ -124,7 +124,7 @@ article {
     /*Recomanat*/
     margin-right: auto;
     /*Recomanat*/
-    min-height: 100vh;
+    /* min-height: 100vh; */ /*Aplicar per a pagines sense contingut*/
     display: flex;
     flex-direction: column;
 }
@@ -393,7 +393,71 @@ nav a:hover {
 }
 /*----------------------------------*/
 
+/*===========================================================
+  SELECTORS PER blog.HTML
+===========================================================*/
+.blog_content {
+    flex-grow: 1;
+    /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+    .grid {
+        display: grid;
+        gap: 10px;
+      }
+      .card {
+        background-color: var(--color-blanc);
+        overflow: hidden;
+        margin: 30px;
+        height: auto;
+      }
 
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .card-content {
+        padding: 15px;
+      }
+      
+      .card-content h2 {
+        font-size: 1.2rem;
+        color: var(--color-negre);
+        margin: 10px 0;
+      }
+      
+      .card-content p {
+        font-size: 0.9rem;
+        color: var(--color-negre);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 /*===========================================================
   SELECTORS PER post.HTML
@@ -405,14 +469,7 @@ nav a:hover {
 
 
 
-/*===========================================================
-  SELECTORS PER blog.HTML
-===========================================================*/
-.blog_content {
-    flex-grow: 1;
-    /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
 
-}
 
 /* Media Queries per ser responsive */
 
@@ -544,6 +601,13 @@ nav a:hover {
 .subtitol {
     font-size: var(--font-size-h2-plus);
 }
+    /*===========================================================
+  SELECTORS PER blog.HTML Tablets
+===========================================================*/
+.grid {
+    grid-template-columns: 1fr;
+  }
+
 
 }
 
@@ -680,7 +744,16 @@ nav a:hover {
     .contenidor-tema-mes {
         flex-direction: row;
     }
+
+
+
     
+    /*===========================================================
+  SELECTORS PER blog.HTML Tablets
+===========================================================*/
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnes */
+      }
 }
 
 /* Escriptori (a partir de 992px) */
@@ -920,4 +993,12 @@ nav a:hover {
         text-align: center;
         margin-top: 10px;
     }
+
+
+
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+      }
 }
