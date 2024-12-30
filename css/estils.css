@@ -168,9 +168,7 @@ nav a:hover {
 .index_content {
     flex-grow: 1;
     /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
-
 }
-
 
 /*HERO IMAGE de index:*/
 .hero {
@@ -524,15 +522,9 @@ nav a:hover {
 
 .pagination .active {
     background-color: var(--color-verd);
-    color: white;
-    border-color: #4CAF50;
+    color: var(--color-blanc);
+    border-color: var(--color-verd);
     cursor: default; /* Quita el cursor de pointer */
-}
-
-.pagination .disabled {
-    color: #ccc;
-    border-color: #ccc;
-    cursor: default;
 }
 
 /*===========================================================
@@ -1035,7 +1027,6 @@ nav a:hover {
     }
 
     .descripcio_animal {
-        /* border: 1px solid rgba(0, 0, 0, 0); */
         flex: 1 1 40%;
         display: flex;
         flex-direction: column;
@@ -1063,7 +1054,9 @@ nav a:hover {
     }
 
 
-
+/*===========================================================
+  SELECTORS PER blog.HTML Desktop
+===========================================================*/
 
     .grid {
         grid-template-columns: repeat(3, minmax(300px, 1fr));
