@@ -140,7 +140,7 @@ nav a {
     color: var(--color-negre);
     font-weight: 700;
 }
-
+.breadcrumb a:hover,
 nav a:hover {
     color: var(--color-verd);
 }
@@ -186,6 +186,7 @@ nav a:hover {
     justify-content: flex-start;
 }
 
+
 .hero-content {
     position: absolute;
     top: 30%;
@@ -213,6 +214,8 @@ nav a:hover {
     margin: 10px;
     background-color: var(--color-beix-modificat);
 }
+
+.post_content .hero a,
 .watermark a,
 .animal a,
 .index_content a {
@@ -220,6 +223,8 @@ nav a:hover {
     border-bottom: 1px dotted var(--color-negre);
     color: var(--color-negre);
 }
+
+.post_content .hero a:hover,
 .watermark a:hover,
 .animal a:hover,
 .index_content a:hover {
@@ -415,6 +420,7 @@ nav a:hover {
 /*===========================================================
   SELECTORS PER blog.HTML
 ===========================================================*/
+.post_content,
 .blog_content {
     flex-grow: 1;
     display: flex;
@@ -532,11 +538,59 @@ nav a:hover {
 ===========================================================*/
 .post_content {
     flex-grow: 1;
-    /*Amb l'estructura de l'html podem mantenir el footer abaix així*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post_content .title{
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.post_content .hero {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-image: url(../img/post-fast-fashion.jpg);
+    background-position: center;
+    background-size: cover; /* Hace que la imagen se adapte al ancho */
+    padding-top: 45vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-repeat: no-repeat;
 }
 
-
-
+.breadcrumb {
+    list-style: none;
+    
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb li  {
+    margin-right: 5px;
+ 
+  }
+  .breadcrumb li a{
+    font-weight: 400;
+  }
+  .breadcrumb li::after {
+    content: ">";
+    margin-left: 5px;
+    color: var(--color-negre);
+  }
+  
+  .breadcrumb li:last-child::after {
+    content: ""; 
+  }
 
 
 /* Media Queries per ser responsive */
