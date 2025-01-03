@@ -214,7 +214,7 @@ nav a:hover {
     margin: 10px;
     background-color: var(--color-beix-modificat);
 }
-
+.post_content section a,
 .post_content .hero a,
 .watermark a,
 .animal a,
@@ -223,7 +223,7 @@ nav a:hover {
     border-bottom: 1px dotted var(--color-negre);
     color: var(--color-negre);
 }
-
+.post_content section a:hover,
 .post_content .hero a:hover,
 .watermark a:hover,
 .animal a:hover,
@@ -420,7 +420,7 @@ nav a:hover {
 /*===========================================================
   SELECTORS PER blog.HTML
 ===========================================================*/
-.post_content,
+
 .blog_content {
     flex-grow: 1;
     display: flex;
@@ -440,8 +440,6 @@ nav a:hover {
     margin: 30px 30px 0 30px;
     height: auto;
 }
-
-
 
 .card-content {
     padding: 15px;
@@ -538,12 +536,17 @@ nav a:hover {
 ===========================================================*/
 .post_content {
     flex-grow: 1;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+}
+/*Cas especial per a poder fer el contingut de text més estret*/
+.post_content .container{
+max-width: 62%;
 }
 .post_content .title{
-    margin: 30px 0 30px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -591,8 +594,28 @@ nav a:hover {
   .breadcrumb li:last-child::after {
     content: ""; 
   }
-
-
+  .post_content .container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .post_content section h2{
+    font-size: var(--font-size-h2);
+    margin-bottom: 20px;
+    
+  }
+  .post_content section:first-of-type p{
+    font-size: var(--font-size-h3);
+    margin-top: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .post_content section p{
+    font-size: var(--font-size-base);
+    margin-top: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
 /* Media Queries per ser responsive */
 
 /* Mobils (fins a 767px) */
