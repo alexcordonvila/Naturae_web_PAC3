@@ -140,6 +140,7 @@ nav a {
     color: var(--color-negre);
     font-weight: 700;
 }
+
 .breadcrumb a:hover,
 nav a:hover {
     color: var(--color-verd);
@@ -214,6 +215,7 @@ nav a:hover {
     margin: 10px;
     background-color: var(--color-beix-modificat);
 }
+
 .post_content section a,
 .post_content .hero a,
 .watermark a,
@@ -223,6 +225,7 @@ nav a:hover {
     border-bottom: 1px dotted var(--color-negre);
     color: var(--color-negre);
 }
+
 .post_content section a:hover,
 .post_content .hero a:hover,
 .watermark a:hover,
@@ -267,7 +270,7 @@ nav a:hover {
 }
 
 .card-content .button,
-.formulario-newsletter button[type="submit"] ,
+.formulario-newsletter button[type="submit"],
 .tarjeta a {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -283,17 +286,20 @@ nav a:hover {
     text-align: center;
     text-decoration: none;
 }
-.card-content .button{
+
+.card-content .button {
     width: fit-content;
     min-width: 25%;
     font-size: var(--font-size-small);
 }
+
 .card-content .button:hover,
 .formulario-newsletter button[type="submit"]:hover,
-.tarjeta a:hover{
+.tarjeta a:hover {
     border: 1px solid var(--color-verd);
 
 }
+
 /*===========================================================
   SELECTORS PER tema-del-mes.HTML
 ===========================================================*/
@@ -337,7 +343,6 @@ nav a:hover {
 }
 
 /*Barra de navegació + llista d'animals*/
-
 /*Barra de navegació d'animals*/
 
 .tema_del_mes_content nav {
@@ -361,7 +366,6 @@ nav a:hover {
 }
 
 /*Estil per al bloc d'animal: Nom, foto, descripció...*/
-
 .animal {
     box-sizing: border-box;
     text-align: justify;
@@ -416,7 +420,6 @@ nav a:hover {
 }
 
 /*----------------------------------*/
-
 /*===========================================================
   SELECTORS PER blog.HTML
 ===========================================================*/
@@ -465,28 +468,30 @@ nav a:hover {
     color: var(--color-negre);
 }
 
-.card .card-content > p:nth-of-type(2) {
+.card .card-content>p:nth-of-type(2) {
     font-size: var(--font-size-small);
     margin: 15px 0 0 0;
 }
+
 .image-container {
-    position: relative; 
-    display: inline-block; 
+    position: relative;
+    display: inline-block;
 }
 
 .image-container img {
-    display: block; 
+    display: block;
     max-width: 100%;
     height: auto;
 }
+
 .watermark {
     position: absolute;
-    bottom: 10px; 
-    right: 10px; 
+    bottom: 10px;
+    right: 10px;
     background-color: var(--color-beix-modificat);
     color: var(--color-negre);
-    padding: 5px; 
-    font-size: 12px; 
+    padding: 5px;
+    font-size: 12px;
     font-family: sans-serif;
 }
 
@@ -528,30 +533,34 @@ nav a:hover {
     background-color: var(--color-verd);
     color: var(--color-blanc);
     border-color: var(--color-verd);
-    cursor: default; /* Quita el cursor de pointer */
+    cursor: default;
+    /* Quita el cursor de pointer */
 }
 
 /*===========================================================
-  SELECTORS PER post.HTML
+  SELECTORS PER post.html
 ===========================================================*/
 .post_content {
     flex-grow: 1;
-    /* display: flex; */
     flex-direction: column;
-    /* align-items: center; */
 }
+
 /*Cas especial per a poder fer el contingut de text més estret*/
-.post_content .container{
-max-width: 62%;
+.post_content .container {
+    max-width: 52%;
 }
-.post_content .title{
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+.post_content .title {
+    margin-top: 0px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
     align-items: flex-start;
     justify-content: space-evenly;
+}
+.post_content .subtitol{
+    margin: 0;
 }
 .post_content .hero {
     position: static;
@@ -559,7 +568,8 @@ max-width: 62%;
     height: auto;
     background-image: url(../img/post-fast-fashion.jpg);
     background-position: center;
-    background-size: cover; /* Hace que la imagen se adapte al ancho */
+    background-size: cover;
+    /* Hace que la imagen se adapte al ancho */
     padding-top: 45vh;
     box-sizing: border-box;
     display: flex;
@@ -572,50 +582,97 @@ max-width: 62%;
 
 .breadcrumb {
     list-style: none;
-    
     display: flex;
     padding: 0;
     margin: 0;
-  }
-  
-  .breadcrumb li  {
+}
+
+.breadcrumb li {
     margin-right: 5px;
- 
-  }
-  .breadcrumb li a{
+}
+
+.breadcrumb li a {
     font-weight: 400;
-  }
-  .breadcrumb li::after {
+}
+
+.breadcrumb li::after {
     content: ">";
     margin-left: 5px;
     color: var(--color-negre);
-  }
-  
-  .breadcrumb li:last-child::after {
-    content: ""; 
-  }
-  .post_content .container{
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+.post_content .container {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
-  }
-  .post_content section h2{
+    row-gap: 35px;
+}
+
+.post_content section h2 {
     font-size: var(--font-size-h2);
-    margin-bottom: 20px;
-    
-  }
-  .post_content section:first-of-type p{
+    align-self: start;
+}
+
+.post_content section:first-of-type p {
     font-size: var(--font-size-h3);
     margin-top: 20px;
     line-height: 1.5;
     font-weight: 400;
-  }
-  .post_content section p{
-    font-size: var(--font-size-base);
+}
+
+.post_content section p {
+    font-size: var(--font-size-large);
     margin-top: 20px;
+    margin-bottom: 20px;
     line-height: 1.5;
     font-weight: 400;
-  }
+    align-self: start;
+}
+
+.post_content section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post_content figure {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+
+    max-width: 700px;
+    width: 100%;
+
+}
+
+.post_content figure iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+.post_content ol{
+    font-size: var(--font-size-small);
+    line-height: 1.5;
+
+}
+.post_content section ol {
+    padding-left: 2.5rem; 
+    line-height: 2.5;
+    font-size: var(--font-size-base);
+}
+
+.post_content figcaption {
+    font-size: var(--font-size-xsmall);
+    color: var(--color-negre);
+    margin-top: 0.5rem;
+}
+
 /* Media Queries per ser responsive */
 
 /* Mobils (fins a 767px) */
@@ -753,7 +810,31 @@ max-width: 62%;
     .grid {
         grid-template-columns: 1fr;
     }
+   /*===========================================================
+  SELECTORS PER post.html mobils
+===========================================================*/
 
+.post_content .container {
+    max-width: 100%;
+}
+.post_content section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.post_content .title p{
+    font-size: var(--font-size-h3);
+}
+.post_content ol{
+    font-size: var(--font-size-base);
+}
+.post_content  .subtitol{
+    margin-top: 0px;
+    font-size: var(--font-size-h3);
+}
+.post_content figure{
+    max-width: 100%;
+}
 
 }
 
@@ -884,22 +965,44 @@ max-width: 62%;
     }
 
     /*===========================================================
-  SELECTORS PER tema-del-mes.HTML Tablets
+  SELECTORS PER tema-del-mes.html Tablets
 ===========================================================*/
     .contenidor-tema-mes {
         flex-direction: row;
     }
 
-
-
-
     /*===========================================================
-  SELECTORS PER blog.HTML Tablets
+  SELECTORS PER blog.html Tablets
 ===========================================================*/
     .grid {
         grid-template-columns: repeat(2, 1fr);
         /* 2 columnes */
     }
+
+
+    /*===========================================================
+  SELECTORS PER post.html Tablets
+===========================================================*/
+
+    .post_content .container {
+        max-width: 100%;
+    }
+    .post_content section:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .post_content .title p{
+        font-size: var(--font-size-large);
+    }
+    .post_content  .subtitol{
+        margin-top: 0px;
+        font-size: var(--font-size-h3);
+    }
+    .post_content figure{
+        max-width: 100%;
+    }
+
 }
 
 /* Escriptori (a partir de 992px) */
@@ -1131,7 +1234,7 @@ max-width: 62%;
     }
 
 
-/*===========================================================
+    /*===========================================================
   SELECTORS PER blog.HTML Desktop
 ===========================================================*/
 
