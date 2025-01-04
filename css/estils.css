@@ -141,7 +141,11 @@ nav a {
 nav a:hover {
     color: var(--color-verd);
 }
-
+abbr {
+    
+    cursor: help; 
+    
+  }
 
 /**/
 /* Contenidor principal adaptable */
@@ -264,6 +268,11 @@ nav a:hover {
     font-weight: 700;
     font-size: var(--font-size-xlarge);
 }
+.tarjeta a:first-of-type:hover,
+.tarjeta a:first-of-type{
+    all: unset; 
+    cursor: pointer;
+}
 
 .card-content .button,
 .formulario-newsletter button[type="submit"],
@@ -353,12 +362,7 @@ nav a:hover {
     flex-direction: row;
 }
 
-.tema_del_mes_content .navegacio ul li:not(:last-child)::after {
-    content: "\00B7";
-    font-size: 1.5em;
-    color: var(--color-verd);
-    vertical-align: inherit;
-}
+
 
 /*Estil per al bloc d'animal: Nom, foto, descripció...*/
 .animal {
@@ -542,7 +546,7 @@ nav a:hover {
 
 /*Cas especial per a poder fer el contingut de text més estret*/
 .post_content .container {
-    max-width: 52%;
+    max-width: 62%;
 }
 
 .post_content .title {
@@ -812,7 +816,12 @@ nav a:hover {
     .subtitol {
         font-size: var(--font-size-h2-plus);
     }
-
+    .tema_del_mes_content .navegacio ul li:not(:last-child)::after {
+        content: "\00B7";
+        font-size: 1.5em;
+        color: var(--color-verd);
+        vertical-align: inherit;
+    }
 /*===========================================================
   SELECTORS PER blog.HTML Tablets
 ===========================================================*/
@@ -992,7 +1001,12 @@ nav a:hover {
     .contenidor-tema-mes {
         flex-direction: row;
     }
-
+    .tema_del_mes_content .navegacio ul li:not(:last-child)::after {
+        content: "\00B7";
+        font-size: 1.5em;
+        color: var(--color-verd);
+        vertical-align: inherit;
+    }
     /*===========================================================
   SELECTORS PER blog.html Tablets
 ===========================================================*/
