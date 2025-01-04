@@ -559,9 +559,11 @@ nav a:hover {
     align-items: flex-start;
     justify-content: space-evenly;
 }
-.post_content .subtitol{
+
+.post_content .subtitol {
     margin: 0;
 }
+
 .post_content .hero {
     position: static;
     width: 100%;
@@ -656,13 +658,15 @@ nav a:hover {
     aspect-ratio: 16 / 9;
     border: none;
 }
-.post_content ol{
+
+.post_content ol {
     font-size: var(--font-size-small);
     line-height: 1.5;
 
 }
+
 .post_content section ol {
-    padding-left: 2.5rem; 
+    padding-left: 2.5rem;
     line-height: 2.5;
     font-size: var(--font-size-base);
 }
@@ -673,8 +677,21 @@ nav a:hover {
     margin-top: 0.5rem;
 }
 
-/* Media Queries per ser responsive */
+.border-negre {
+    width: 100vw;
+    height: 1px;
+    background-color: var(--color-negre);
+    border: none;
+    position: relative;
+}
 
+.mes_articles {
+    border-top: 1px;
+    flex-direction: column;
+    padding: 30px 50px 50px 50px;
+}
+
+/*==================== Media Queries per ser responsive ===============*/
 /* Mobils (fins a 767px) */
 @media (max-width: 767px) {
     .container {
@@ -727,7 +744,7 @@ nav a:hover {
         gap: 0.5rem;
     }
 
-    /*===========================================================
+/*===========================================================
   SELECTORS PER index.HTML
 ===========================================================*/
     /*Contingut del contenidor per sota de la imatge*/
@@ -792,7 +809,7 @@ nav a:hover {
         width: 31%;
     }
 
-    /*===========================================================
+/*===========================================================
   SELECTORS PER tema-del-mes.HTML
 ===========================================================*/
     .tema_del_mes_content nav {
@@ -804,37 +821,44 @@ nav a:hover {
         font-size: var(--font-size-h2-plus);
     }
 
-    /*===========================================================
+/*===========================================================
   SELECTORS PER blog.HTML Tablets
 ===========================================================*/
     .grid {
         grid-template-columns: 1fr;
     }
-   /*===========================================================
+
+/*===========================================================
   SELECTORS PER post.html mobils
 ===========================================================*/
 
-.post_content .container {
-    max-width: 100%;
-}
-.post_content section:nth-of-type(3) {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-.post_content .title p{
-    font-size: var(--font-size-h3);
-}
-.post_content ol{
-    font-size: var(--font-size-base);
-}
-.post_content  .subtitol{
-    margin-top: 0px;
-    font-size: var(--font-size-h3);
-}
-.post_content figure{
-    max-width: 100%;
-}
+    .post_content .container {
+        max-width: 100%;
+    }
+
+    .post_content section:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .post_content .title p {
+        font-size: var(--font-size-h3);
+    }
+
+    .post_content ol {
+        font-size: var(--font-size-base);
+    }
+
+    .post_content .subtitol {
+        margin-top: 0px;
+        font-size: var(--font-size-h3);
+    }
+
+    .post_content figure {
+        max-width: 100%;
+    }
+
 
 }
 
@@ -890,7 +914,7 @@ nav a:hover {
         gap: 0.5rem;
     }
 
-    /*===========================================================
+/*===========================================================
   SELECTORS PER index.HTML Tablets
 ===========================================================*/
     /*Contingut del contenidor per sota de la imatge*/
@@ -987,19 +1011,23 @@ nav a:hover {
     .post_content .container {
         max-width: 100%;
     }
+
     .post_content section:nth-of-type(3) {
         display: flex;
         flex-direction: column;
         align-items: start;
     }
-    .post_content .title p{
+
+    .post_content .title p {
         font-size: var(--font-size-large);
     }
-    .post_content  .subtitol{
+
+    .post_content .subtitol {
         margin-top: 0px;
         font-size: var(--font-size-h3);
     }
-    .post_content figure{
+
+    .post_content figure {
         max-width: 100%;
     }
 
@@ -1240,6 +1268,22 @@ nav a:hover {
 
     .grid {
         grid-template-columns: repeat(3, minmax(300px, 1fr));
-        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    }
+    .post_content .grid {
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+        text-decoration: none;
+        border-bottom: 0px ;
+        color: var(--color-negre);
+    }
+    .post_content .card{
+        margin: 30px 10px 0px 0px;
+    }
+    .post_content .grid .card-content a:first-of-type  {
+        text-decoration: none;
+        border-bottom: 0px ;
+    }
+    .post_content .grid .card-content h2{
+        font-size: var(--font-size-xlarge);
+
     }
 }
