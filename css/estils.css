@@ -123,16 +123,12 @@ article {
     margin-left: auto;
     /*Recomanat*/
     margin-right: auto;
-    /*Recomanat*/
-    /* min-height: 100vh; */
-    /*Aplicar per a pagines sense contingut*/
     display: flex;
     flex-direction: column;
 }
 
 nav {
     display: flex;
-
 }
 
 nav a {
@@ -297,7 +293,6 @@ nav a:hover {
 .formulario-newsletter button[type="submit"]:hover,
 .tarjeta a:hover {
     border: 1px solid var(--color-verd);
-
 }
 
 /*===========================================================
@@ -358,7 +353,7 @@ nav a:hover {
     flex-direction: row;
 }
 
-.tema_del_mes_content ul li:not(:last-child)::after {
+.tema_del_mes_content .navegacio ul li:not(:last-child)::after {
     content: "\00B7";
     font-size: 1.5em;
     color: var(--color-verd);
@@ -419,7 +414,7 @@ nav a:hover {
     font-weight: 400;
 }
 
-/*----------------------------------*/
+
 /*===========================================================
   SELECTORS PER blog.HTML
 ===========================================================*/
@@ -460,7 +455,6 @@ nav a:hover {
 
 .card-content a {
     text-decoration: none;
-
 }
 
 .card-content p {
@@ -527,6 +521,8 @@ nav a:hover {
 
 .pagination a:hover {
     background-color: var(--color-verd);
+    color: var(--color-blanc);
+    border: 0;
 }
 
 .pagination .active {
@@ -534,7 +530,6 @@ nav a:hover {
     color: var(--color-blanc);
     border-color: var(--color-verd);
     cursor: default;
-    /* Quita el cursor de pointer */
 }
 
 /*===========================================================
@@ -545,7 +540,7 @@ nav a:hover {
     flex-direction: column;
 }
 
-/*Cas especial p    er a poder fer el contingut de text més estret*/
+/*Cas especial per a poder fer el contingut de text més estret*/
 .post_content .container {
     max-width: 52%;
 }
@@ -645,10 +640,8 @@ nav a:hover {
     flex-direction: column;
     align-items: start;
     position: relative;
-
     max-width: 700px;
     width: 100%;
-
 }
 
 .post_content figure iframe {
@@ -662,7 +655,6 @@ nav a:hover {
 .post_content ol {
     font-size: var(--font-size-small);
     line-height: 1.5;
-
 }
 
 .post_content section ol {
@@ -719,7 +711,6 @@ nav a:hover {
     footer {
         flex-direction: column;
         padding: 30px 50px 50px 50px;
-  
     }
 
     footer .footer-social {
@@ -1264,7 +1255,7 @@ nav a:hover {
     }
 
     .animal img {
-        border: 15px solid white;
+        border: 15px solid var(--color-blanc);
         display: block;
         max-width: 100%;
         height: auto;
